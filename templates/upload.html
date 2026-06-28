@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Upload Data</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>OpsPilot</h2>
+
+    <ul>
+
+        <li><a href="/dashboard">🏠 Dashboard</a></li>
+
+        <li class="active"><a href="/upload">📤 Upload Data</a></li>
+
+        <li>📊 Analytics</li>
+
+        <li>🤖 AI Insights</li>
+
+        <li>📄 Reports</li>
+
+        <li>⚙ Settings</li>
+
+    </ul>
+
+</div>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>Upload Enterprise Data 📤</h1>
+
+        <div class="user-info">
+            🔔 Admin
+        </div>
+
+    </div>
+
+    <p class="subtitle">
+    Upload your company's Excel report. OpsPilot will understand the data, analyze it, detect business insights, and generate recommendations.
+</p>
+    
+
+    <div class="upload-box">
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="excel_file"
+                accept=".xlsx,.xls"
+                required>
+
+            <br><br>
+
+            <button type="submit">
+    Analyze Report
+</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

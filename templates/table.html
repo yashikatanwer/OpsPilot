@@ -1,0 +1,98 @@
+<body>
+
+<div class="sidebar">
+
+    <h2>OpsPilot</h2>
+
+    <ul>
+        <li><a href="/dashboard">🏠 Dashboard</a></li>
+        <li class="active">📤 Upload Data</li>
+    </ul>
+
+</div>
+
+<div class="main">
+
+    <h1>Dataset Summary</h1>
+
+    <div class="summary-box">
+
+        <div class="summary-card">
+            <h3>{{ summary.rows }}</h3>
+            <p>Total Rows</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>{{ summary.columns }}</h3>
+            <p>Total Columns</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>{{ summary.completeness }}%</h3>
+            <p>Data Completeness</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>{{ summary.missing }}</h3>
+            <p>Missing Values</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>{{ summary.duplicates }}</h3>
+            <p>Duplicate Rows</p>
+        </div>
+
+        <div class="summary-card">
+            <h3>{{ summary.empty_columns }}</h3>
+            <p>Empty Columns</p>
+        </div>
+
+    </div>
+
+    <h2>Dataset Structure</h2>
+
+    <p>
+        <b>Numeric Columns:</b>
+        {{ summary.numeric_columns|join(", ") }}
+    </p>
+
+    <p>
+        <b>Text Columns:</b>
+        {{ summary.text_columns|join(", ") }}
+    </p>
+
+    <p>
+        <b>Date Columns:</b>
+        {{ summary.date_columns|join(", ") }}
+    </p>
+
+    <hr><br>
+
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+    <h2>Column Profile</h2>
+
+<table class="profile-table">
+
+    <tr>
+        <th>Column</th>
+        <th>Unique Values</th>
+    </tr>
+
+    {% for column, count in summary.unique_values.items() %}
+
+    <tr>
+        <td>{{ column }}</td>
+        <td>{{ count }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+<br>
+
+</div>
+
+</body>
