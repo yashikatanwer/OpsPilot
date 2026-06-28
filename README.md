@@ -1,32 +1,33 @@
 # OpsPilot
 
-OpsPilot is an AI-powered Enterprise Decision Support System that helps organizations analyze business datasets, identify data quality issues, and generate operational insights.
+OpsPilot is an AI-powered Enterprise Decision Support System that helps organizations analyze operational datasets, identify data quality issues, generate insights, and support better business decisions.
 
-## Features
+## Current Features
 
-- Excel Upload
-- Data Profiling
-- Missing Value Detection
-- Duplicate Detection
-- Dataset Structure Analysis
-- Data Completeness Analysis
+- 🔐 Login Interface
+- 📊 Enterprise Dashboard
+- 📤 Excel File Upload
+- 📈 Dataset Profiling
+- 📋 Data Preview
+- 📑 Data Quality Analysis
 
 ## Tech Stack
 
 - Python
 - Flask
 - Pandas
-- HTML
-- CSS
+- HTML5
+- CSS3
 
-## Upcoming Features
+## Future Roadmap
 
 - Automatic Dataset Detection
-- KPI Generation
-- AI Insights
+- Dynamic KPI Generation
 - Interactive Charts
-- PDF Reports
+- AI Insights
+- PDF Report Generation
+- Enterprise Decision Support
 
 ## Status
 
-🚧 Under Development
+🚧 Version 1 (In Development)
